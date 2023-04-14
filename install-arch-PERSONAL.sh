@@ -7,7 +7,7 @@ rm -rf yay-bin
 
 sudo ln -snf ~/repos/wayland-dotfiles/dotconfig/* ~/.config/
 
-yay -S linux-lts-headers nvidia-open-dkms hyprland-nvidia-git xdg-desktop-portal-hyprland-git libva-nvidia-driver-git easyeffects kitty hyprpicker ttf-ms-fonts ttf-apple-emoji ttf-google-sans ttf-jetbrains-mono-nerd neofetch polkit-gnome ffmpeg neovim dunst rofi pavucontrol starship wl-clipboard wf-recorder swaybg grimblast-git ffmpegthumbnailer playerctl noise-suppression-for-voice waybar-hyprland-git wlogout swaylock-effects sddm-git nwg-look-bin layan-gtk-theme-git lxappearance qt5ct qt6ct pamixer brave-bin webcord-git-screenshare ntfs onedrivegui ark obs-studio
+yay -S linux-lts-headers nvidia-open-dkms hyprland-nvidia-git xdg-desktop-portal-hyprland-git libva-nvidia-driver-git easyeffects kitty hyprpicker ttf-ms-fonts ttf-apple-emoji ttf-google-sans ttf-jetbrains-mono-nerd neofetch polkit-gnome ffmpeg neovim dunst rofi pavucontrol starship wl-clipboard wf-recorder swaybg grimblast-git ffmpegthumbnailer playerctl noise-suppression-for-voice waybar-hyprland-git wlogout swaylock-effects sddm-git nwg-look-bin layan-gtk-theme-git lxappearance qt5ct qt6ct pamixer brave-bin webcord-git-screenshare ntfs onedrivegui ark steam-native-runtime obs-studio
 
 sudo mkdir /mnt/4tb
 sudo mkdir /mnt/2tb
