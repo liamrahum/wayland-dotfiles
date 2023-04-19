@@ -3,10 +3,10 @@
 
 # <file system> <dir> <type> <options> <dump> <pass>
 # /dev/nvme0n1p2
-UUID=6b143853-02c6-4b76-aa08-6b73c1efe3e4	/         	ext4      	rw,relatime,stripe=32	0 1
+/dev/nvme0n1p2	/         	ext4      	rw,relatime,stripe=32	0 1
 
 # /dev/nvme0n1p1
-UUID=0C53-8073      	/boot     	vfat      	rw,relatime,fmask=0022,dmask=0022,codepage=437,iocharset=ascii,shortname=mixed,utf8,errors=remount-ro	0 2
+/dev/nvme0n1p1	/boot     	vfat      	rw,relatime,fmask=0022,dmask=0022,codepage=437,iocharset=ascii,shortname=mixed,utf8,errors=remount-ro	0 2
 
 
 UUID=1d91317f-b92f-4d97-a79f-ac16a02b4ca8	/mnt/2tb	ext4	defaults	0	0
