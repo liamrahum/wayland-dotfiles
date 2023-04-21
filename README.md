@@ -1,10 +1,15 @@
 # My Personal Hyprland Dotfiles
 After trying window managers for a while,  it's time to try the best thing Wayland can offer.
 
-To install yay:
+## To install yay (the AUR helper):
 
 ```git clone https://aur.archlinux.org/yay-bin && cd yay-bin && makepkg -si```
 
-Used packages:
+## Necessary packages:
 
-```yay -S nvidia-open-dkms hyprland-git neofetch polkit-gnome ffmpeg neovim viewnior dunst rofi pavucontrol starship wl-clipboard wf-recorder swaybg grimblast-git ffmpegthumbnailer tumbler playerctl noise-suppression-for-voice kitty waybar-hyprland wlogout swaylock-effects sddm-git nwg-look-bin nordic-theme papirus-icon-theme tela-icon-theme pamixer```
+* For NVIDIA GPUs: ```yay -S linux-lts-headers nvidia-open-dkms hyprland-nvidia-git```
+
+* For others: ```yay -S linux-lts-headers hyprland-git```
+
+## Complete setup packages
+```yay -S neofetch polkit-gnome neovim dunst rofi pamixer pavucontrol wl-clipboard wf-recorder-git swaybg grimblast-git ffmpegthumbnailer tumbler playerctl kitty waybar-hyprland wlogout swaylock-effects sddm-git nwg-look-bin tela-icon-theme```
