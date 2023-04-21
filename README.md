@@ -1,5 +1,4 @@
 # My Personal Hyprland Dotfiles
-After trying window managers for a while,  it's time to try the best thing Wayland can offer.
 
 ## To install yay (the AUR helper):
 
