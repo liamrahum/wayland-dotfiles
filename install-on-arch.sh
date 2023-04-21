@@ -51,7 +51,7 @@ yay -S dex kitty neofetch polkit-gnome neovim dunst rofi pavucontrol grimblast-g
 clear
 read -p "Would you like to install Brave, Dolphin, WebCord, and ntfs? (y/N)?" BDWN
 if [ "$BDWN" = "y" || "$BDWN" = "Y" ]; then
-yay -S dolphin brave-bin ntfs3-dkms webcord-git-screenshare;
+yay -S dolphin brave-bin webcord-git-screenshare;
 fi
 
 clear
