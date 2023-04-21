@@ -1,14 +1,35 @@
 # My Personal Hyprland Dotfiles
 
-## To install yay (the AUR helper):
+## 👨‍💻 Auto installer (nvidia, lts-kernel)
+### To install automatically run:
 
-```git clone https://aur.archlinux.org/yay-bin && cd yay-bin && makepkg -si```
+```
+cd ~/repos/wayland-dotfiles
+chmod +x install-arch-NVIDIA-LTS.sh
+sudo ./install-arch-NVIDIA-LTS.sh
+```
 
-## Necessary packages:
+## ⚒️ Manual install:
+#### To install yay (the AUR helper):
 
-* For NVIDIA GPUs: ```yay -S linux-lts-headers nvidia-open-dkms hyprland-nvidia-git```
+```
+git clone https://aur.archlinux.org/yay-bin && cd yay-bin && makepkg -si
+```
 
-* For others: ```yay -S linux-lts-headers hyprland-git```
+#### Necessary packages:
 
-## Complete setup packages
-```yay -S neofetch polkit-gnome neovim dunst rofi pamixer pavucontrol wl-clipboard wf-recorder-git swaybg grimblast-git ffmpegthumbnailer tumbler playerctl kitty waybar-hyprland wlogout swaylock-effects sddm-git nwg-look-bin tela-icon-theme```
+* For NVIDIA GPUs: 
+```
+yay -S linux-lts-headers nvidia-open-dkms hyprland-nvidia-git
+```
+
+* For others: 
+```
+yay -S linux-lts-headers hyprland-git
+```
+
+#### Complete setup packages
+
+```
+yay -S neofetch polkit-gnome neovim dunst rofi pamixer pavucontrol wl-clipboard wf-recorder-git swaybg grimblast-git ffmpegthumbnailer tumbler playerctl kitty waybar-hyprland wlogout swaylock-effects sddm-git nwg-look-bin tela-icon-theme
+```
