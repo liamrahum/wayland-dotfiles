@@ -42,5 +42,5 @@ yay -S xdg-desktop-portal-hyprland-git waybar-hyprland-git wl-clipboard wf-recor
 
 #### Some specifics
 ```
-yay -S layan-gtk-theme-git brave-bin webcord-git-screenshare dolphin ntfs3-dkms
+yay -S layan-gtk-theme-git brave-bin webcord-git-screenshare dolphin
 ```
