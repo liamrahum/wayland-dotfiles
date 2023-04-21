@@ -1,4 +1,6 @@
 # 🚀 My Personal Hyprland Dotfiles 
+![image](https://user-images.githubusercontent.com/45101400/233688723-13b4694d-e59b-4d26-bbf9-8aef4dec166f.png)
+![image](https://user-images.githubusercontent.com/45101400/233689341-0326465f-f358-425e-9ac2-35c85792cbaf.png)
 
 ## 👨‍💻 Auto installer (Arch-based distros) <img src="https://user-images.githubusercontent.com/45101400/233601358-786e991a-698f-4753-a7c6-4280dd9c4fd3.png" width="25"/> 
 ### To install automatically run:
@@ -40,5 +42,5 @@ yay -S xdg-desktop-portal-hyprland-git waybar-hyprland-git wl-clipboard wf-recor
 
 #### Some specifics
 ```
-yay -S layan-gtk-theme-git brave-bin webcord-git-screenshare dolphin ntfs3-dkms
+yay -S layan-gtk-theme-git brave-bin webcord-git-screenshare dolphin
 ```
