@@ -18,7 +18,20 @@ sudo ln -snf ~/repos/wayland-dotfiles/dotconfig/* ~/.config/
 clear
 echo "Installing necessary packages"
 sleep(2)
-yay -S linux-lts-headers nvidia-open-dkms hyprland-nvidia-git xdg-desktop-portal-hyprland-git libva-nvidia-driver-git waybar-hyprland-git
+yay -S linux-lts linux-lts-headers xdg-desktop-portal-hyprland-git waybar-hyprland-git
+
+clear
+read -p "Are you using an NVIDIA GPU? (Y/n)" NVIDIA
+if ["$NVIDIA" == "n" || "$NVIDIA" == "N"]; then
+  yay -S hyprland-git
+else
+  yay -S nvidia-open-dkms hyprland-nvidia-git libva-nvidia-driver-git
+  sudo cp -f mkinitcpio.conf /etc/
+  sudo cp -f nvidia.conf /etc/modprobe.d/nvidia.conf
+
+  sudo mkinitcpio --config /etc/mkinitcpio.conf --generate /boot/initramfs-custom.img
+fi
+sudo cp -f environment /etc/
 
 clear
 echo "Installing Wayland specifics"
@@ -37,14 +50,14 @@ yay -S dex kitty neofetch polkit-gnome neovim dunst rofi pavucontrol grimblast-g
 
 clear
 read -p "Would you like to install Brave, Dolphin, WebCord, and ntfs? (y/N)?" BDWN
-if [ "$BDWN" = "y" || "" = "Y" ]; then
+if [ "$BDWN" = "y" || "$BDWN" = "Y" ]; then
 yay -S dolphin brave-bin ntfs3-dkms webcord-git-screenshare;
 fi
 
 clear
 echo "WARNING! This will break your system if you're not the author of the git repo!"
 read -p "Would you like to skip the personal part? (Y/n)?" SKIP
-if [ "$SKIP" = "n" || "" = "N" ]; then
+if [ "$SKIP" = "n" || "$SKIP" = "N" ]; then
   yay -S calf-git easyeffects
   sudo mkdir /mnt/4tb;
   sudo mkdir /mnt/2tb;
@@ -58,15 +71,9 @@ if [ "$SKIP" = "n" || "" = "N" ]; then
   sudo ln -snf /mnt/4tb/OneDrive/Pictures ~/;
 fi
 
-sudo cp -f environment /etc/
-sudo cp -f mkinitcpio.conf /etc/
-sudo cp -f nvidia.conf /etc/modprobe.d/nvidia.conf
-
-sudo mkinitcpio --config /etc/mkinitcpio.conf --generate /boot/initramfs-custom.img
-
 clear
 read -p "Would you like to enable sddm? (y/N)?" SDDM
-if [ "$SDDM" = "y" || "" = "Y" ]; then
+if [ "$SDDM" = "y" || "$SDDM" = "Y" ]; then
   sudo systemctl enable sddm;
 else
   echo "Oh well";
