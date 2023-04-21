@@ -61,7 +61,7 @@ if [ "$SKIP" = "n" || "$SKIP" = "N" ]; then
   yay -S calf-git easyeffects
   sudo mkdir /mnt/4tb;
   sudo mkdir /mnt/2tb;
-  sudo cp -f fstab /etc/; 
+  sudo cp -f personal/fstab /etc/; 
   sudo systemctl daemon-reload;
   sudo mount -a;
   mkdir ~/.config/autostart;
