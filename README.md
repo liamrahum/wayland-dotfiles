@@ -1,6 +1,6 @@
 # 🚀 My Personal Hyprland Dotfiles 
 
-## 👨‍💻 Auto installer (nvidia, lts-kernel)
+## 👨‍💻 Auto installer
 ### To install automatically run:
 
 ```
@@ -8,7 +8,7 @@ cd ~/repos/wayland-dotfiles
 chmod +x install-on-arch.sh
 sudo ./install-on-arch.sh
 ```
-
+##### * Note: I'm using the LTS kernel for a bit more stability on Arch
 ## ⚒️ Manual install:
 #### To install yay (the AUR helper):
 
