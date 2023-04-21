@@ -9,7 +9,8 @@
     "modules-left": [
         "clock",
         "custom/weather",
-        "wlr/workspaces"
+        "wlr/workspaces",
+	"wlr/taskbar"
     ],
     "modules-center": ["hyprland/window"],
     "modules-right": [
@@ -42,6 +43,17 @@
             "9": [],
             "10": []
         }
+    },
+        "wlr/taskbar": {
+        "format": "{icon}",
+        "icon-size": 16,
+        "all-outputs": true,
+        "tooltip-format": "{title}",
+        "on-click": "activate",
+        "on-click-middle": "close",
+        "ignore-list": [
+            "rofi"
+         ]
     },
     "custom/updates": {
         "format": " {}",
