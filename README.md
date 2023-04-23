@@ -9,6 +9,8 @@ cd ~/repos/wayland-dotfiles
 chmod +x install-on-arch.sh
 sudo ./install-on-arch.sh
 ```
+
+##### * IMPORTANT: run the script from ~/repos/wayland-dotfiles! (The script uses symbolic links for EVERY config)
 ##### * Note: I'm using the LTS kernel for a bit more stability on Arch
 ##### * Note 2: If you're using NVIDIA & systemd-boot, you'll need to manually add the kernel parameters for Hyprland to work.
 
