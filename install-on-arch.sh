@@ -1,9 +1,9 @@
 #!/bin/bash
 
 echo "WARNING! Run this script from '~/repos/wayland-dotfiles'! Otherwise things will break!"
-sleep(3)
+sleep 3
 
-sudo pacman -Syu git --noconfirm
+sudo pacman -Syu git --noconfirm`
 
 git clone https://aur.archlinux.org/yay-bin && cd yay-bin && makepkg -si
 cd ..
@@ -16,52 +16,40 @@ cd wayland-dotfiles
 sudo ln -snf ~/repos/wayland-dotfiles/dotconfig/* ~/.config/
 
 clear
-echo "Installing necessary packages"
-sleep(2)
-yay -S linux-lts linux-lts-headers xdg-desktop-portal-hyprland-git waybar-hyprland-git
+yay -S linux-lts linux-lts-headers xdg-desktop-portal-hyprland-git waybar-hyprland-git 
+
+yay -S networkmanager network-manager-applet bluez bluez-utils blueman
+
+yay -S sddm qt5-wayland qt6-wayland qt5-quickcontrols qt5-quickcontrols2 qt5-graphicaleffects
+
+yay -S dunst rofi-lbonn-wayland-git swww swaylock-effects-git wlogout grim slurp swappy
+
+yay -S polkit-kde-agent pacman-contrib imagemagick pavucontrol pamixer python-requests noto-fonts-emoji
+
+yay -S nwg-look kvantum qt5ct qt6ct
+
+yay -S brave-bin kitty neofetch dolphin vscodium neovim ark kde-cli-tools
+
 
 clear
 read -p "Are you using an NVIDIA GPU? (Y/n)" NVIDIA
 if ["$NVIDIA" == "n" || "$NVIDIA" == "N"]; then
   yay -S hyprland-git
 else
-  yay -S nvidia-open-dkms hyprland-nvidia-git libva-nvidia-driver-git
+  yay -S nvidia-dkms nvidia-utils hyprland-nvidia-git libva-nvidia-driver-git
   sudo cp -f mkinitcpio.conf /etc/
-  sudo cp -f nvidia.conf /etc/modprobe.d/nvidia.conf
+  sudo cp -f nvidia.conf /etc/modprobe.d/nvidia.conf  
+  sudo mkinitcpio --config /etc/mkinitcpio.conf -p linux-lts
 
-  sudo mkinitcpio --config /etc/mkinitcpio.conf --generate /boot/initramfs-custom.img
-fi
-sudo cp -f environment /etc/
-
-clear
-echo "Installing Wayland specifics"
-sleep(2)
-yay -S wl-clipboard wf-recorder hyprpicker swaybg wlogout swaylock-effects 
-
-clear
-echo "Installing some nice fonts"
-sleep(2)
-yay -S ttf-ms-fonts ttf-apple-emoji ttf-google-sans ttf-jetbrains-mono-nerd
-
-clear
-echo "General applications to start with"
-sleep(2)
-yay -S dex kitty neofetch polkit-gnome neovim dunst rofi pavucontrol grimblast-git playerctl sddm-git nwg-look-bin layan-gtk-theme-git lxappearance qt5ct qt6ct pamixer
-
-clear
-read -p "Would you like to install Brave, Dolphin, WebCord, and ntfs? (y/N)?" BDWN
-if [ "$BDWN" = "y" || "$BDWN" = "Y" ]; then
-yay -S dolphin brave-bin webcord-git-screenshare;
 fi
 
-clear
 echo "WARNING! This will break your system if you're not the author of the git repo!"
 read -p "Would you like to skip the personal part? (Y/n)?" SKIP
 if [ "$SKIP" = "n" || "$SKIP" = "N" ]; then
   yay -S calf-git easyeffects
   sudo mkdir /mnt/4tb;
   sudo mkdir /mnt/2tb;
-  sudo cp -f personal/fstab /etc/; 
+  sudo cp -f ~/repos/wayland-dotfiles/personal/fstab /etc/; 
   sudo systemctl daemon-reload;
   sudo mount -a;
   mkdir ~/.config/autostart;
@@ -72,13 +60,26 @@ if [ "$SKIP" = "n" || "$SKIP" = "N" ]; then
 fi
 
 clear
-read -p "Would you like to enable sddm? (y/N)?" SDDM
-if [ "$SDDM" = "y" || "$SDDM" = "Y" ]; then
-  sudo systemctl enable sddm;
-else
-  echo "Oh well";
+
+read -p "If you're using GRUB & NVIDIA, press y to configure NVIDIA (y/N)?" UGRUB
+if [ "$UGRUB" = "y" || "$UGRUB" = "Y" ]; then
+  GRUB=`cat /etc/default/grub | grep "GRUB_CMDLINE_LINUX_DEFAULT" | rev | cut -c 2- | rev`
+  GRUB+=" nvidia_drm.modeset=1\""
+  sudo sed -i -e "s|^GRUB_CMDLINE_LINUX_DEFAULT.*|${GRUB}|" /etc/default/grub
+  sudo grub-mkconfig -o /boot/grub/grub.cfg     
 fi
 
-echo "Script finished! Rebooting..."
-sleep(1)
-reboot
+read -p "You wanna add virtualization capabilites? (y/N)" VIRT
+if [ "$VIRT" = "y" || "$VIRT" = "Y" ]; then
+  GRUB=`cat /etc/default/grub | grep "GRUB_CMDLINE_LINUX_DEFAULT" | rev | cut -c 2- | rev`
+  read -p "Press Y for AMD CPUs, N for Intel? (Y/n)" INTEL
+  if [ "$INTEL" = "y" || "$INTEL" = "Y" ]; then
+    GRUB+=" amd_iommu=on iommu=pt video=efifb:off\""
+  else
+    GRUB+=" intel_iommu=on iommu=pt\""
+  fi
+  sudo sed -i -e "s|^GRUB_CMDLINE_LINUX_DEFAULT.*|${GRUB}|" /etc/default/grub
+  sudo grub-mkconfig -o /boot/grub/grub.cfg
+fi
+
+
