@@ -26,6 +26,8 @@ yay -S dunst rofi-lbonn-wayland-git swww swaylock-effects-git wlogout grim slurp
 
 yay -S polkit-kde-agent pacman-contrib imagemagick pavucontrol pamixer python-requests noto-fonts-emoji
 
+yay -S wl-clipboard wf-recorder hyprpicker swaybg ttf-ms-fonts ttf-apple-emoji ttf-google-sans ttf-jetbrains-mono-nerd dex
+
 yay -S nwg-look kvantum qt5ct qt6ct
 
 yay -S brave-bin kitty neofetch dolphin vscodium neovim ark kde-cli-tools
