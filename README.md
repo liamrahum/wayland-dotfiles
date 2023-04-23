@@ -38,19 +38,12 @@ yay -S linux-lts linux-lts-headers hyprland-git
 #### Complete setup packages
 
 ```
-yay -S xdg-desktop-portal-hyprland-git waybar-hyprland-git
-
-yay -S networkmanager network-manager-applet bluez bluez-utils blueman
-
-yay -S sddm qt5-wayland qt6-wayland qt5-quickcontrols qt5-quickcontrols2 qt5-graphicaleffects
-
-yay -S dunst rofi-lbonn-wayland-git swww swaylock-effects-git wlogout grim slurp swappy
-
-yay -S wl-clipboard wf-recorder hyprpicker swaybg ttf-ms-fonts ttf-apple-emoji ttf-google-sans ttf-jetbrains-mono-nerd dex
-
-yay -S polkit-kde-agent pacman-contrib imagemagick pavucontrol pamixer python-requests noto-fonts-emoji
-
-yay -S nwg-look kvantum qt5ct qt6ct
-
-yay -S brave-bin kitty neofetch dolphin vscodium neovim ark kde-cli-tools
+yay -S xdg-desktop-portal-hyprland-git waybar-hyprland-git \
+networkmanager network-manager-applet bluez bluez-utils blueman \
+sddm qt5-wayland qt6-wayland qt5-quickcontrols qt5-quickcontrols2 qt5-graphicaleffects \
+dunst rofi-lbonn-wayland-git swww swaylock-effects-git wlogout grim slurp swappy \
+wl-clipboard wf-recorder hyprpicker swaybg ttf-ms-fonts ttf-apple-emoji ttf-google-sans ttf-jetbrains-mono-nerd dex \
+polkit-kde-agent pacman-contrib imagemagick pavucontrol pamixer python-requests noto-fonts-emoji \
+nwg-look kvantum qt5ct qt6ct \
+brave-bin kitty neofetch dolphin vscodium neovim ark kde-cli-tools
 ```
