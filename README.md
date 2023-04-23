@@ -1,5 +1,5 @@
-# 🚀 My Personal Hyprland Dotfiles 
-![image](https://user-images.githubusercontent.com/45101400/233792716-4ca542ce-c004-4404-b73a-82330e95b1c5.png)
+# 🚀 My Hyprland Dotfiles 
+![image](https://user-images.githubusercontent.com/45101400/233857253-8494100d-4c07-4fc0-95af-89bca0537f42.png)
 
 ## 👨‍💻 Auto installer (Arch-based distros)
 ### To install automatically run:
@@ -47,3 +47,7 @@ polkit-kde-agent pacman-contrib imagemagick pavucontrol pamixer python-requests 
 nwg-look kvantum qt5ct qt6ct \
 brave-bin kitty neofetch dolphin vscodium neovim ark kde-cli-tools
 ```
+
+### TODO:
+- [ ] Clipboard tool
+- [ ] Full screen capture (screensharing)
