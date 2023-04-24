@@ -3,7 +3,7 @@
 echo "WARNING! Run this script from '~/repos/wayland-dotfiles'! Otherwise things will break!"
 sleep 3
 
-sudo pacman -Syu git --noconfirm`
+sudo pacman -Syu git --noconfirm
 
 git clone https://aur.archlinux.org/yay-bin && cd yay-bin && makepkg -si
 cd ..
