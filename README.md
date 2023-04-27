@@ -1,5 +1,5 @@
 # 🚀 My Hyprland Dotfiles 
-![image](https://user-images.githubusercontent.com/45101400/233857253-8494100d-4c07-4fc0-95af-89bca0537f42.png)
+![image](https://user-images.githubusercontent.com/45101400/234958778-54532547-b1e1-47d8-9afa-1516900bcc00.png)
 
 ## 👨‍💻 Auto installer (Arch-based distros)
 ### To install automatically run:
