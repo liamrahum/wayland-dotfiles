@@ -1,6 +1,26 @@
 #!/usr/bin/env sh
 
 ## define functions ##
+
+Wall_Prev()
+{
+    WallSet=`readlink $BASEDIR/wall.$WALLMODE`
+    Wallist=(`dirname $WallSet`/*)
+
+    for((i=0;i<${#Wallist[@]};i++))
+    do
+        if [ $((i + 1)) -eq ${#Wallist[@]} ] ; then
+            ln -fs ${Wallist[0]} $BASEDIR/wall.$WALLMODE
+            break
+        elif [ ${Wallist[i]} == ${WallSet} ] ; then
+            ln -fs ${Wallist[i-1]} $BASEDIR/wall.$WALLMODE
+            break
+        fi
+    done
+}
+
+
+
 Wall_Next()
 {
     WallSet=`readlink $BASEDIR/wall.$WALLMODE`
@@ -65,6 +85,7 @@ while getopts "dlsnt" option ; do
         fi ;;
     n ) # set the next wallpaper
         Wall_Next ;;
+    p ) Wall_Prev ;;
     t ) # display tooltip
         echo "󰋫 Next Wallpaper 󰉼 󰆊"
         exit 0 ;;
