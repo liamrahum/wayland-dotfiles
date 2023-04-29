@@ -102,10 +102,6 @@ source $ZSH/oh-my-zsh.sh
 # Example aliases
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
-alias  l='exa -l  --icons'
-alias ls='exa -1  --icons'
-alias ll='exa -la --icons'
-alias ld='exa -lD --icons'
 
 alias in='sudo pacman -S' # install package
 alias un='sudo pacman -Rns' # uninstall package
@@ -115,7 +111,10 @@ alias pa='pacman -Ss' # list availabe package
 alias pc='sudo pacman -Sc' # remove unused cache
 alias po='pacman -Qtdq | sudo pacman -Rns -' # remove unused packages, also try > pacman -Qqd | pacman -Rsu --print -
 
-alias vc='code'  # gui code editor
+alias v='nvim'
+alias vi='nvim'
+alias vim='nvim'
+
 #alias gs='cd ~/Dots/Scripts ; ./git_sync.sh' # sync my git repo
 
 # To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
