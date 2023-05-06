@@ -32,16 +32,16 @@
    },
 
     "hyprland/window": {
-        "format": "  {}",
+        "format": "   {}",
         "separate-outputs": true,
         "rewrite": {
-            "tittu@kryptonite:(.*)": "$1 ",
+            "liam@archlinux:(.*)": "$1 ",
             "(.*) — Mozilla Firefox": "$1 󰈹",
             "(.*)Mozilla Firefox": "Firefox 󰈹",
-            "(.*) - Visual Studio Code": "$1 󰨞",
-            "(.*)Visual Studio Code": "Code 󰨞",
+            "(.*) - VSCodium": "$1 󰨞",
+            "(.*)VSCodium": "Code 󰨞",
             "(.*) — Dolphin": "$1 󰉋",
-            "(.*)Spotify Free": "Spotify 󰓇",
+            "(.*)Spotify": "Spotify 󰓇",
             "(.*)Steam": "Steam 󰓓"
           }
     },
@@ -104,7 +104,7 @@
 
     "pulseaudio": {
         "format": "{icon}",
-        "format-muted": "婢",
+        "format-muted": "󰝟",
         "on-click": "pavucontrol -t 3",
         "on-click-middle": "pamixer -t",
         "on-scroll-up": "pamixer -i 5",
@@ -124,7 +124,7 @@
 
     "pulseaudio#microphone": {
         "format": "{format_source}",
-        "format-source": " {volume}%",
+        "format-source": " {volume}%",
         "format-source-muted": "",
         "on-click": "pavucontrol -t 4",
         "on-click-middle": "pamixer --default-source -t",
@@ -134,7 +134,7 @@
     },
 
     "custom/wallchange": {
-        "format": "{}",
+        "format": "󰊠{}",
         "exec": "~/.config/swww/swwwallpaper.sh -t",
         "on-click": "~/.config/swww/swwwallpaper.sh -n",
         "interval" : 86400, // once every day
