@@ -51,5 +51,5 @@ brave-bin kitty neofetch dolphin vscodium neovim ark kde-cli-tools
 ```
 
 ### TODO:
-- [ ] Clipboard tool
+- [x] Clipboard tool
 - [ ] Full screen capture (screensharing)

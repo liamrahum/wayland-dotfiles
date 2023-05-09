@@ -8,7 +8,7 @@
     "gtk-layer-shell": true,
     "modules-left": ["cpu","memory","clock"],
     "modules-center": ["wlr/workspaces","hyprland/window"],
-    "modules-right": ["custom/updates","network","pulseaudio","pulseaudio#microphone","custom/wallchange","tray","custom/power"],
+    "modules-right": ["custom/updates","network","pulseaudio","pulseaudio#microphone","custom/wallchange","custom/mode","tray","custom/power"],
 
 
 // center modules //
@@ -142,10 +142,8 @@
     },
 
     "custom/mode": {
-        "format": "{}",
-        "exec": "echo ; echo 󰟡 switch mode",
+        "format": " {}",
         "on-click": "~/.config/hypr/modeswitch.sh switch",
-        "interval" : 86400, // once every day
         "tooltip": true
     },
 
