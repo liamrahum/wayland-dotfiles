@@ -2,23 +2,6 @@
 
 ## define functions ##
 
-Wall_Prev()
-{
-    WallSet=`readlink $BASEDIR/wall.$WALLMODE`
-    Wallist=(`dirname $WallSet`/*)
-
-    for((i=0;i<${#Wallist[@]};i++))
-    do
-        if [ $((i + 1)) -eq ${#Wallist[@]} ] ; then
-            ln -fs ${Wallist[0]} $BASEDIR/wall.$WALLMODE
-            break
-        elif [ ${Wallist[i]} == ${WallSet} ] ; then
-            ln -fs ${Wallist[i-1]} $BASEDIR/wall.$WALLMODE
-            break
-        fi
-    done
-}
-
 
 
 Wall_Next()
