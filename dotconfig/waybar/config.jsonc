@@ -135,16 +135,15 @@
 
     "custom/wallchange": {
         "format": "󰊠{}",
-        "exec": "~/.config/swww/swwwallpaper.sh -t",
+	"exec": "~/.config/swww/swwwallpaper.sh -t",
         "on-click": "~/.config/swww/swwwallpaper.sh -n",
         "interval" : 86400, // once every day
         "tooltip": true
     },
 
     "custom/mode": {
-        "format": " {}",
-        "on-click": "~/.config/hypr/modeswitch.sh switch",
-        "tooltip": true
+        "format": " ",
+        "on-click": "~/.config/hypr/scripts/modeswitch.sh switch"
     },
 
     "tray": {
