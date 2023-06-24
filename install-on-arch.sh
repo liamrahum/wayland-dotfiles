@@ -14,6 +14,7 @@ git clone https://github.com/liamrahum/wallpapers
 cd wayland-dotfiles
 
 sudo ln -snf ~/repos/wayland-dotfiles/dotconfig/* ~/.config/
+sudo ln -snf ~/repos/wayland-dotfiles/dotconfig/hypr/scripts/delete-clipboard-history.sh /usr/bin/resetclipboard
 
 clear
 yay -S linux-lts linux-lts-headers xdg-desktop-portal-hyprland-git waybar-hyprland-git 
