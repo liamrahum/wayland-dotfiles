@@ -8,7 +8,7 @@
     "gtk-layer-shell": true,
     "modules-left": ["cpu","memory","clock"],
     "modules-center": ["wlr/workspaces","hyprland/window"],
-    "modules-right": ["custom/updates","network","pulseaudio","pulseaudio#microphone","custom/wallchange","custom/mode","tray","custom/power"],
+    "modules-right": ["custom/updates","network","pulseaudio","pulseaudio#microphone","custom/wallchange","custom/mode", "custom/resetclipboard","tray","custom/power"],
 
 
 // center modules //
@@ -35,7 +35,7 @@
         "format": "   {}",
         "separate-outputs": true,
         "rewrite": {
-            "liam@archlinux:(.*)": "$1 ",
+            "liam@manjaro:(.*)": "$1 ",
             "(.*) — Mozilla Firefox": "$1 󰈹",
             "(.*)Mozilla Firefox": "Firefox 󰈹",
             "(.*) - VSCodium": "$1 󰨞",
@@ -140,6 +140,12 @@
         "interval" : 86400, // once every day
         "tooltip": true
     },
+    "custom/resetclipboard": {
+        "format": "{}",
+        "on-click": "resetclipboard",
+        "tooltip": true
+    },
+
 
     "custom/mode": {
         "format": " ",
