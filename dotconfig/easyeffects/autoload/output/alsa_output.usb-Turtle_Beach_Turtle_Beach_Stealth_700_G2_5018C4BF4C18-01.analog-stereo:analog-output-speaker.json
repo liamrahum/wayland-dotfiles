@@ -1,0 +1,6 @@
+{
+    "device": "alsa_output.usb-Turtle_Beach_Turtle_Beach_Stealth_700_G2_5018C4BF4C18-01.analog-stereo",
+    "device-description": "Turtle Beach Stealth 700 G2 Analog Stereo",
+    "device-profile": "analog-output-speaker",
+    "preset-name": "Mono"
+}
