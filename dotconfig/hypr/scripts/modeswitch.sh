@@ -30,7 +30,6 @@ fi
 
 ### hyprland ###
 ln -fs $CFGDIR/hypr/${S_MODE}.conf $CFGDIR/hypr/theme.conf
-hyprctl reload
 
 ### swwwallpaper ###
 x=`echo $S_MODE | cut -c 1`
@@ -50,3 +49,4 @@ killall -SIGUSR1 kitty
 ln -fs $CFGDIR/waybar/${S_MODE}.css $CFGDIR/waybar/style.css
 sleep 1
 killall -SIGUSR2 waybar
+nohup waybar &
