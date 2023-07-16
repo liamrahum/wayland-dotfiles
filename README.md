@@ -1,5 +1,6 @@
 # 🚀 My Hyprland Dotfiles 
-![image](https://user-images.githubusercontent.com/45101400/234958778-54532547-b1e1-47d8-9afa-1516900bcc00.png)
+![image](https://github.com/liamrahum/wayland-dotfiles/assets/45101400/3a048282-734c-406c-979d-50889f04689b)
+
 
 ## 👨‍💻 Auto installer (Arch-based distros)
 ### To install automatically run:
