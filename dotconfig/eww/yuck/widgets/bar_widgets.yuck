@@ -2,7 +2,7 @@
     (button
         :class "button launcher"
         :onclick "${EWW_CONFIG_DIR}/scripts/launcher toggle_menu app_launcher"
-        (label :class "icon" :text "" :halign "center")
+        (label :class "icon" :text "󰣇" :halign "center")
     )
 ))
 
@@ -98,26 +98,7 @@
     :class "controls"
     :orientation orientation
     :space-evenly false
-    (controls_icon
-        :orientation orientation
-        :transition {orientation == "v" ? "slideup" : "slideleft"}
-        :control "bluetooth"
-        :reveal bluetooth_reveal
-        :visible {bluetooth.state == "on"}
-        :value {arraylength(bluetooth.connected_devices) == 0 ? "Not Connected" : bluetooth.connected_devices[0].name}
-        :icon {bluetooth.icon}
-        :style {bluetooth.state}
-        :angle {orientation == "v" ? 90 : 0})
-    (controls_icon
-        :orientation orientation
-        :transition {orientation == "v" ? "slideup" : "slideleft"}
-        :control "bt_speaker"
-        :reveal bt_speaker_reveal
-        :visible {arraylength(bluetooth.connected_devices) > 0}
-        :value {bluetooth.connected_devices[0].name}
-        :icon {bluetooth.connected_devices[0].icon}
-        :style ""
-        :angle {orientation == "v" ? 90 : 0})
+
     (controls_icon
         :orientation orientation
         :transition {orientation == "v" ? "slideup" : "slideleft"}
@@ -136,44 +117,7 @@
         :value {volume.level}
         :onchange "${EWW_CONFIG_DIR}/scripts/volume set {}"
         :icon {volume.icon})
-    (controls_slider
-        :orientation orientation
-        :transition {orientation == "v" ? "slideup" : "slideleft"}
-        :control "screen"
-        :reveal screen_reveal
-        :value {brightness.screen.level}
-        :onchange "${EWW_CONFIG_DIR}/scripts/brightness set_screen {}"
-        :icon {brightness.screen.icon})
-    (controls_icon
-        :orientation orientation
-        :transition {orientation == "v" ? "slideup" : "slideleft"}
-        :control "network"
-        :reveal network_reveal
-        :visible true
-        :value {network.wifi.ssid}
-        :icon {network[network.primary].icon}
-        :style {network[network.primary].style}
-        :angle {orientation == "v" ? 90 : 0}) 
-    (controls_icon
-        :orientation orientation
-        :transition {orientation == "v" ? "slideup" : "slideleft"}
-        :control "battery"
-        :reveal battery_reveal
-        :visible {battery.availabe}
-        :value {battery.percent}
-        :icon {battery.icon}
-        :style {battery.state}
-        :angle 0)
-    (controls_icon
-        :orientation orientation
-        :transition {orientation == "v" ? "slideup" : "slideleft"}
-        :control "notifications"
-        :reveal notifications_reveal
-        :visible true
-        :value {notifications.count}
-        :icon {notifications.icon}
-        :style {notifications.count > 0 ? "active" : ""}
-        :angle 0)
+
 ))
 
 (defwidget panel_system_indicators [orientation] (box :class "button-bin"
