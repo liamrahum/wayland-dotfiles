@@ -1,0 +1,8 @@
+
+(waybar:41982): Gtk-WARNING **: 16:16:37.908: Theme parsing error: gtk.css:7661:22: 'shadow_4' is not a valid color name
+[2023-07-20 16:16:37.923] [info] Using configuration file /home/liam/.config/waybar/config.jsonc
+[2023-07-20 16:16:37.923] [info] Using CSS file /home/liam/.config/waybar/style.css
+[2023-07-20 16:16:37.934] [info] Hyprland IPC starting
+[2023-07-20 16:16:38.052] [warning] Requested height: 28 is less than the minimum height: 36 required by the modules
+[2023-07-20 16:16:38.052] [info] Bar configured (width: 2560, height: 36) for output: DP-3
+ok

@@ -1,6 +1,5 @@
 (defvar desktop_reveal true)
 (defwidget desktop [] (box
     :class "desktop"
-    :style "background-image: url('~/.config/swww/wall.set')"
-    (desktop_clock)
+    :style "background-image: url('/home/liam/repos/wallpapers/colorful/gradient-crystals.png')"
 ))
