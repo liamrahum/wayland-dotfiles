@@ -8,7 +8,7 @@
 }
 
 window#waybar {
-    background: rgba(17, 17, 27, .1);
+    background: rgba(17, 17, 27, .05);
 }
 
 
@@ -70,7 +70,7 @@ tooltip {
 #custom-resetclipboard,
 #tray {
     color: #cdd6f4;
-    background: #181B4A;
+    background: #050216;
     opacity: 1;
     padding: 0px;
     margin: 6px 0px 6px 0px;

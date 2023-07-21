@@ -1,0 +1,92 @@
+
+(waybar:13680): Gtk-WARNING **: 19:34:16.406: Theme parsing error: gtk.css:7661:22: 'shadow_4' is not a valid color name
+[2023-07-20 19:34:16.421] [info] Using configuration file /home/liam/.config/waybar/config.jsonc
+[2023-07-20 19:34:16.421] [info] Using CSS file /home/liam/.config/waybar/style.css
+[2023-07-20 19:34:16.430] [info] Hyprland IPC starting
+[2023-07-20 19:34:16.552] [warning] Requested height: 28 is less than the minimum height: 36 required by the modules
+[2023-07-20 19:34:16.552] [info] Bar configured (width: 2492, height: 36) for output: DP-3
+
+** (waybar:13680): WARNING **: 19:34:16.554: Status Notifier Item with bus name ':1.37' and object path '/org/ayatana/NotificationItem/jetbrains_toolbox' is already registered
+[2023-07-20 19:34:18.693] [info] Bar configured (width: 2560, height: 36) for output: DP-3
+
+** (waybar:13680): WARNING **: 19:34:42.013: Status Notifier Item with bus name ':1.37' and object path '/org/ayatana/NotificationItem/jetbrains_toolbox' is already registered
+
+** (waybar:13680): WARNING **: 19:34:42.016: Status Notifier Item with bus name ':1.125' and object path '/org/ayatana/NotificationItem/xmcl1' is already registered
+
+** (waybar:13680): WARNING **: 19:36:26.449: Status Notifier Item with bus name ':1.37' and object path '/org/ayatana/NotificationItem/jetbrains_toolbox' is already registered
+
+** (waybar:13680): WARNING **: 19:36:26.449: Status Notifier Item with bus name ':1.125' and object path '/org/ayatana/NotificationItem/xmcl1' is already registered
+[2023-07-20 20:02:05.466] [warning] Failed to update properties: GDBus.Error:org.freedesktop.DBus.Error.UnknownMethod: Object does not exist at path “/org/ayatana/NotificationItem/xmcl1”
+
+** (waybar:13680): WARNING **: 20:02:07.139: Status Notifier Item with bus name ':1.37' and object path '/org/ayatana/NotificationItem/jetbrains_toolbox' is already registered
+[2023-07-20 20:02:47.899] [warning] Requested height: 36 is less than the minimum height: 40 required by the modules
+[2023-07-20 20:02:47.899] [info] Bar configured (width: 2560, height: 40) for output: DP-3
+[2023-07-20 20:02:51.186] [info] Bar configured (width: 2560, height: 36) for output: DP-3
+
+** (waybar:13680): WARNING **: 20:05:18.355: Status Notifier Item with bus name ':1.37' and object path '/org/ayatana/NotificationItem/jetbrains_toolbox' is already registered
+==> ERROR: Cannot fetch updates
+[201 20:05:30.759787] [glfw error 65544]: process_desktop_settings: failed with error: [org.freedesktop.DBus.Error.UnknownMethod] No such interface “org.freedesktop.portal.Settings” on object at path /org/freedesktop/portal/desktop
+==> ERROR: Cannot fetch updates
+[201 20:05:32.502979] [glfw error 65544]: process_desktop_settings: failed with error: [org.freedesktop.DBus.Error.UnknownMethod] No such interface “org.freedesktop.portal.Settings” on object at path /org/freedesktop/portal/desktop
+warning: queue 0x55972541e0a0 destroyed while proxies still attached:
+  zwp_linux_dmabuf_feedback_v1@30 still attached
+  zwp_linux_dmabuf_feedback_v1@27 still attached
+  zwp_linux_dmabuf_v1@28 still attached
+warning: queue 0x55b6de2fbe60 destroyed while proxies still attached:
+  zwp_linux_dmabuf_feedback_v1@30 still attached
+  zwp_linux_dmabuf_feedback_v1@27 still attached
+  zwp_linux_dmabuf_v1@28 still attached
+
+** (waybar:13680): WARNING **: 20:31:10.248: Status Notifier Item with bus name ':1.37' and object path '/org/ayatana/NotificationItem/jetbrains_toolbox' is already registered
+
+** (waybar:13680): WARNING **: 20:31:10.248: Status Notifier Item with bus name ':1.416' and object path '/org/ayatana/NotificationItem/net_lutris_Lutris' is already registered
+
+** (waybar:13680): WARNING **: 20:31:13.861: Status Notifier Item with bus name ':1.37' and object path '/org/ayatana/NotificationItem/jetbrains_toolbox' is already registered
+ok
+ok
+ok
+ok
+sh: line 1: activate: command not found
+sh: line 1: activate: command not found
+ok
+sh: line 1: activate: command not found
+ok
+ok
+ok
+ok
+sh: line 1: activate: command not found
+sh: line 1: activate: command not found
+ok
+ok
+ok
+ok
+ok
+ok
+
+** (waybar:13680): WARNING **: 21:11:11.807: Status Notifier Item with bus name ':1.37' and object path '/org/ayatana/NotificationItem/jetbrains_toolbox' is already registered
+sh: line 1: activate: command not found
+ok
+sh: line 1: activate: command not found
+ok
+ok
+ok
+ok
+ok
+ok
+ok
+ok
+sh: line 1: activate: command not found
+ok
+ok
+sh: line 1: activate: command not found
+ok
+ok
+ok
+ok
+sh: line 1: activate: command not found
+ok
+ok
+ok
+ok
+sh: line 1: activate: command not found
+ok
