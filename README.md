@@ -1,4 +1,5 @@
-# 🚀 My Hyprland Dotfiles 
+# NOTE: I moved this repo to my main [dotfiles](https://github.com/liamrahum/dotfiles)
+## 🚀 My Hyprland Dotfiles 
 ![image](https://github.com/liamrahum/wayland-dotfiles/assets/45101400/3a048282-734c-406c-979d-50889f04689b)
 
 
